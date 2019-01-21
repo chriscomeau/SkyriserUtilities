@@ -5,8 +5,11 @@ Skyriser Media - Swift Utilities - [http://skyriser.com/](http://skyriser.com/)
 ## Utilities:
 
 - Bundle+Utils.swift
-- UIColors.Utils.swift
-- UIImage+Utils.swift
+- Colors.Utils.swift
+- Date+Utils.swift
+- Image+Utils.swift
+- Numbers+Utils.swift
+- String+Utils.swift
 
 
 ## Contact
