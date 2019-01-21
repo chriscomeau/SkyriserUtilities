@@ -4,6 +4,7 @@ Skyriser Media - Swift Utilities - [http://skyriser.com/](http://skyriser.com/)
 
 ## Utilities:
 
+- Alerts+Utils.swift
 - App+Utils.swift
 - Bundle+Utils.swift
 - Colors.Utils.swift
