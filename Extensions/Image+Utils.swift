@@ -1,5 +1,5 @@
 //
-//  UIImage+Utils.swift
+//  Image+Utils.swift
 //
 //  Created by Chris Comeau on 2018-09-05.
 //  Copyright © 2018 Skyriser Media. All rights reserved.
@@ -11,11 +11,11 @@ import UIKit
 public extension UIImage
 {
     static let empty = UIImage(named:"default")!
-  
+
     public func saveToPhotos(completionTarget: AnyObject?, completionSelector: Selector?) {
         UIImageWriteToSavedPhotosAlbum(self, completionTarget, completionSelector, nil)
     }
-    
+
     public func resized(toHeight points: CGFloat) -> UIImage? {
         let height = points * scale
         let ratio = height / size.height
@@ -23,7 +23,7 @@ public extension UIImage
         let newSize = CGSize(width: width, height: height)
         return resized(toSize: newSize)
     }
-    
+
     public func resized(toSize newSize: CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
         draw(in: CGRect(origin: CGPoint.zero, size: newSize))
@@ -31,7 +31,7 @@ public extension UIImage
         UIGraphicsEndImageContext()
         return result
     }
-    
+
     public func resized(toWidth points: CGFloat) -> UIImage? {
         let width = points * scale
         let ratio = width / size.width
@@ -48,12 +48,12 @@ public extension UIImageView {
             self.image = UIImage.empty
             return
         }
-      
+
         if let urlString = imgURLString {
             if let url = URL(string:urlString) {
-                
+
                 let task = URLSession.shared.dataTask(with:url) { (data, response, error) in
-                    
+
                     guard data != nil else {
                         print("invalid data")
                         return
@@ -69,7 +69,7 @@ public extension UIImageView {
                         }
                     }
                 }
-                
+
                 task.resume()
             }
         }

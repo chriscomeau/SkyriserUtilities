@@ -4,10 +4,13 @@ Skyriser Media - Swift Utilities - [http://skyriser.com/](http://skyriser.com/)
 
 ## Utilities:
 
+- App+Utils.swift
 - Bundle+Utils.swift
 - Colors.Utils.swift
 - Date+Utils.swift
+- Haptics+Utils.swift
 - Image+Utils.swift
+- Network+Utils.swift
 - Numbers+Utils.swift
 - String+Utils.swift
 
