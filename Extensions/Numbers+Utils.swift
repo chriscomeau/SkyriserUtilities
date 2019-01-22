@@ -13,13 +13,13 @@ extension Comparable {
     func clamp(low: Self, high: Self) -> Self {
         //let number1 = 5
         //print(number1.clamp(low: 0, high: 10))
-        if (self > high) {
+        if self > high {
             return high
-        } else if (self < low) {
+        } else if self < low {
             return low
         }
-        
-        return self
+
+      return self
     }
 }
 
@@ -31,12 +31,11 @@ extension Int {
     private static var numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
-        
-        return numberFormatter
+
+      return numberFormatter
     }()
-    
-    var delimiter: String {
+
+  var delimiter: String {
         return Int.numberFormatter.string(from: NSNumber(value: self)) ?? ""
     }
 }
-

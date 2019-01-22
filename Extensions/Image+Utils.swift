@@ -8,9 +8,8 @@
 import Foundation
 import UIKit
 
-public extension UIImage
-{
-    static let empty = UIImage(named:"default")!
+public extension UIImage {
+    static let empty = UIImage(named: "default")!
 
     public func saveToPhotos(completionTarget: AnyObject?, completionSelector: Selector?) {
         UIImageWriteToSavedPhotosAlbum(self, completionTarget, completionSelector, nil)
@@ -39,7 +38,6 @@ public extension UIImage
         let newSize = CGSize(width: width, height: height)
         return resized(toSize: newSize)
     }
-
 }
 
 public extension UIImageView {
@@ -50,9 +48,9 @@ public extension UIImageView {
         }
 
         if let urlString = imgURLString {
-            if let url = URL(string:urlString) {
+            if let url = URL(string: urlString) {
 
-                let task = URLSession.shared.dataTask(with:url) { (data, response, error) in
+                let task = URLSession.shared.dataTask(with: url) { (data, _/*response*/, error) in
 
                     guard data != nil else {
                         print("invalid data")

@@ -10,26 +10,26 @@ import SystemConfiguration
 import UIKit
 
 public struct App {
-	
-	public static var isSimulator: Bool {
+
+  public static var isSimulator: Bool {
 		//return (TARGET_IPHONE_SIMULATOR != 0)
-		
-		#if targetEnvironment(simulator)
+
+    #if targetEnvironment(simulator)
 			return true
 		#else
 			return false
 		#endif
 	}
-	
-	public static var isIpad: Bool {
+
+  public static var isIpad: Bool {
 		return (UIDevice.current.userInterfaceIdiom == .pad)
 	}
-	
-	public static var isDebug: Bool {
+
+  public static var isDebug: Bool {
 		return _isDebugAssertConfiguration()
 	}
-	
-//	static func appDelegate () -> AppDelegate
+
+  //	static func appDelegate () -> AppDelegate
 //	{
 //			return UIApplication.shared.delegate as! AppDelegate
 //	}
@@ -37,12 +37,12 @@ public struct App {
 
 struct RuntimeError: Error {
 	let message: String
-	
-	init(_ message: String) {
+
+  init(_ message: String) {
 		self.message = message
 	}
-	
-	public var localizedDescription: String {
+
+  public var localizedDescription: String {
 		return message
 	}
 }

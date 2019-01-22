@@ -12,7 +12,7 @@ import UIKit
 class Network {
 
 	//class func IsOnline() -> Bool {
-	static func IsOnline() -> Bool {
+	static func isOnline() -> Bool {
 		return Reachability.isConnectedToNetwork()
 	}
 }
