@@ -41,7 +41,8 @@ public extension UIImage {
 }
 
 public extension UIImageView {
-    func setCustomImage(_ imgURLString: String?) {
+  //send tag for UITableViewCell
+  func setCustomImage(_ imgURLString: String?, tag:Int? = nil) {
         guard imgURLString != nil else {
             self.image = UIImage.empty
             return
@@ -52,20 +53,31 @@ public extension UIImageView {
 
                 let task = URLSession.shared.dataTask(with: url) { (data, _/*response*/, error) in
 
-                    guard data != nil else {
-                        print("invalid data")
-                        return
+                  guard data != nil else {
+                      print("invalid data")
+                      return
+                  }
+                  guard error == nil else {
+                      print("error: \(String(describing: error))")
+                      return
+                  }
+                
+                  //if same tag or no tag
+                  var shouldSet = true
+                  if let tag = tag {
+                    if tag != self.tag {
+                      shouldSet = false
                     }
-                    guard error == nil else {
-                        print("error: \(String(describing: error))")
-                        return
-                    }
-                    //data image
+                  }
+                  
+                  //data image
+                  if shouldSet {
                     DispatchQueue.main.async {
                         if let data = data {
                             self.image = UIImage(data: data)
                         }
                     }
+                  }
                 }
 
                 task.resume()
