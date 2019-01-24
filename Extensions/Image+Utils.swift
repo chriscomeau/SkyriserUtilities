@@ -62,17 +62,17 @@ public extension UIImageView {
                       return
                   }
                 
-                  //if same tag or no tag
-                  var shouldSet = true
-                  if let tag = tag {
-                    if tag != self.tag {
-                      shouldSet = false
+                  DispatchQueue.main.async {
+                    //if same tag or no tag
+                    var shouldSet = true
+                    if let tag = tag {
+                      if tag != self.tag {
+                        shouldSet = false
+                      }
                     }
-                  }
-                  
-                  //data image
-                  if shouldSet {
-                    DispatchQueue.main.async {
+                    
+                    //data image
+                    if shouldSet {
                         if let data = data {
                             self.image = UIImage(data: data)
                         }
