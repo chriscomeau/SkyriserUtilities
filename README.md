@@ -2,7 +2,11 @@
 
 Skyriser Media - Swift Utilities - [http://skyriser.com/](http://skyriser.com/)
 
-## Utilities:
+## Features
+
+* Swift 4.2
+
+## Utilities
 
 - Alerts+Utils.swift
 - App+Utils.swift
