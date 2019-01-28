@@ -20,9 +20,16 @@ Skyriser Media - Swift Utilities - [http://skyriser.com/](http://skyriser.com/)
 - String+Utils.swift
 
 
-## Release History
+## Changelog
 
-* 1.0 (January 28, 2018)
+1.0 - 2018-01-28
+
+- Added:
+   - ...
+- Changed:
+   - ...
+
+
 
 
 ## Contact
