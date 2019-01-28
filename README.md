@@ -16,6 +16,11 @@ Skyriser Media - Swift Utilities - [http://skyriser.com/](http://skyriser.com/)
 - String+Utils.swift
 
 
+## Release History
+
+* 1.0 (January 28, 2018)
+
+
 ## Contact
 
 * Chris Comeau
