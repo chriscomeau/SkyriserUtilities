@@ -29,6 +29,10 @@ public struct App {
     return _isDebugAssertConfiguration()
   }
 
+  public static var isUnitTesting: Bool {
+    return ProcessInfo.processInfo.environment["UNITTEST"] == "1"
+  }
+
   //https://mobile.twitter.com/kraustifer/status/1090773523860058112
   public static var isTestFlight: Bool {
     guard let appStoreReceiptURL = Bundle.main.appStoreReceiptURL else {
