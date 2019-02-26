@@ -1,5 +1,5 @@
 //
-//  App+Utils.swift
+//  Alerts+Utils.swift
 //
 //  Created by Christian Comeau on 2018-08-03.
 //  Copyright © 2018 Test. All rights reserved.
