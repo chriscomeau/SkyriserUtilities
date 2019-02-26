@@ -42,7 +42,7 @@ public extension UIImage {
 
 public extension UIImageView {
   //send tag for UITableViewCell
-  func setCustomImage(_ imgURLString: String?, tag:Int? = nil) {
+  func setCustomImage(_ imgURLString: String?, tag: Int? = nil) {
         guard imgURLString != nil else {
             self.image = UIImage.empty
             return
@@ -61,7 +61,7 @@ public extension UIImageView {
                       print("error: \(String(describing: error))")
                       return
                   }
-                
+
                   DispatchQueue.main.async {
                     //if same tag or no tag
                     var shouldSet = true
@@ -70,7 +70,7 @@ public extension UIImageView {
                         shouldSet = false
                       }
                     }
-                    
+
                     //data image
                     if shouldSet {
                         if let data = data {
