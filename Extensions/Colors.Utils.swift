@@ -1,5 +1,5 @@
 //
-//  UIColors+Utils.swift
+//  Colors+Utils.swift
 //
 //  Created by Chris Comeau on 2018-09-05.
 //  Copyright © 2018 Skyriser Media. All rights reserved.
