@@ -11,11 +11,11 @@ import UIKit
 public extension UIImage {
     static let empty = UIImage(named: "default")!
 
-    public func saveToPhotos(completionTarget: AnyObject?, completionSelector: Selector?) {
+    func saveToPhotos(completionTarget: AnyObject?, completionSelector: Selector?) {
         UIImageWriteToSavedPhotosAlbum(self, completionTarget, completionSelector, nil)
     }
 
-    public func resized(toHeight points: CGFloat) -> UIImage? {
+    func resized(toHeight points: CGFloat) -> UIImage? {
         let height = points * scale
         let ratio = height / size.height
         let width = size.width * ratio
@@ -23,7 +23,7 @@ public extension UIImage {
         return resized(toSize: newSize)
     }
 
-    public func resized(toSize newSize: CGSize) -> UIImage? {
+    func resized(toSize newSize: CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
         draw(in: CGRect(origin: CGPoint.zero, size: newSize))
         let result = UIGraphicsGetImageFromCurrentImageContext()
@@ -31,7 +31,7 @@ public extension UIImage {
         return result
     }
 
-    public func resized(toWidth points: CGFloat) -> UIImage? {
+    func resized(toWidth points: CGFloat) -> UIImage? {
         let width = points * scale
         let ratio = width / size.width
         let height = size.height * ratio
