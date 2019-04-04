@@ -1,3 +1,5 @@
+[![Swift 4.2](https://img.shields.io/badge/swift-4.2-red.svg?style=flat)](https://developer.apple.com/swift) [![Swift 5.0](https://img.shields.io/badge/swift-5.0-green.svg?style=flat)](https://developer.apple.com/swift) [![Twitter](https://img.shields.io/badge/twitter-@chriscomeau-blue.svg)](http://twitter.com/chriscomeau)
+
 # SkyriserUtilities
 
 Skyriser Media - Swift Utilities - [http://skyriser.com/](http://skyriser.com/)
